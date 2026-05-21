@@ -1,0 +1,117 @@
+/* =============================================
+   CSS RESET
+   ============================================= */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+img, svg { display: block; max-width: 100%; }
+ul { list-style: none; }
+a { text-decoration: none; color: inherit; }
+button { cursor: pointer; border: none; background: none; font-family: inherit; }
+input, select, textarea { font-family: inherit; border: none; outline: none; background: none; }
+fieldset { border: none; }
+
+/* =============================================
+   CUSTOM PROPERTIES
+   ============================================= */
+:root {
+  --primary:       #3563E9;
+  --primary-hover: #2a54d1;
+  --primary-light: rgba(53, 99, 233, 0.1);
+  --dark:          #1A202C;
+  --text-body:     #596780;
+  --gray:          #90A3BF;
+  --border:        #C3D4E9;
+  --bg-page:       #F6F7F9;
+  --bg-card:       #FFFFFF;
+  --red:           #ED3F3F;
+  --white:         #FFFFFF;
+  --yellow:        #FBAD39;
+
+  --font:          'Plus Jakarta Sans', sans-serif;
+  --container:     1312px;
+  --radius-card:   10px;
+  --shadow-card:   0 4px 24px rgba(0, 0, 0, 0.06);
+  --transition:    0.18s ease;
+}
+
+/* =============================================
+   UTILITY
+   ============================================= */
+.sr-only {
+  position: absolute;
+  width: 1px; height: 1px;
+  padding: 0; margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* =============================================
+   BASE
+   ============================================= */
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--font);
+  font-size: 14px;
+  color: var(--text-body);
+  background-color: var(--bg-page);
+  line-height: 1.5;
+}
+
+.container {
+  width: 100%;
+  max-width: var(--container);
+  margin-inline: auto;
+  padding-inline: 24px;
+}
+
+/* =============================================
+   BUTTONS
+   ============================================= */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-family: var(--font);
+  font-weight: 600;
+  border-radius: 4px;
+  transition: background-color var(--transition), opacity var(--transition);
+  white-space: nowrap;
+  cursor: pointer;
+  line-height: 1;
+}
+
+.btn--primary {
+  background-color: var(--primary);
+  color: var(--white);
+  padding: 14px 20px;
+  font-size: 16px;
+}
+.btn--primary:hover { background-color: var(--primary-hover); }
+
+.btn--sm { padding: 10px 20px; font-size: 14px; }
+.btn--lg { padding: 14px 48px; font-size: 16px; }
+
+.btn--white {
+  background-color: var(--white);
+  color: var(--primary);
+  padding: 10px 24px;
+  font-size: 14px;
+}
+.btn--white:hover { opacity: 0.9; }
+
+.btn--white-outline {
+  background-color: transparent;
+  color: var(--white);
+  border: 2px solid var(--white);
+  padding: 10px 24px;
+  font-size: 14px;
+}
+.btn--white-outline:hover { background-color: rgba(255,255,255,0.12); }
