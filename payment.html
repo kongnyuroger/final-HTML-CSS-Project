@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Payment — MORENT</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="styles/style.css" />
+</head>
+<body>
+
+  <!-- ========== NAVBAR ========== -->
+  <header class="navbar">
+    <div class="container navbar__inner">
+      <a href="index.html" class="navbar__logo" aria-label="MORENT home">
+        <svg width="28" height="28" viewBox="0 0 28 28" fill="none" aria-hidden="true">
+          <rect width="28" height="28" rx="6" fill="#3563E9"/>
+          <path d="M6 18l3-6h10l3 6H6z" fill="white"/>
+          <circle cx="10" cy="19.5" r="1.5" fill="white"/>
+          <circle cx="18" cy="19.5" r="1.5" fill="white"/>
+          <path d="M9 15l1.5-3h7l1.5 3H9z" fill="#3563E9"/>
+        </svg>
+        <span>MORENT</span>
+      </a>
+      <div class="navbar__search">
+        <label for="nav-search" class="sr-only">Search cars</label>
+        <i class="fa-solid fa-magnifying-glass navbar__search-icon" aria-hidden="true"></i>
+        <input id="nav-search" type="search" placeholder="Search something here" class="navbar__search-input" />
+        <button class="navbar__filter-btn" aria-label="Filter">
+          <i class="fa-solid fa-sliders" aria-hidden="true"></i>
+        </button>
+      </div>
+      <nav class="navbar__actions" aria-label="User actions">
+        <button class="navbar__icon-btn" aria-label="Favourites">
+          <i class="fa-regular fa-heart" aria-hidden="true"></i>
+        </button>
+        <button class="navbar__icon-btn" aria-label="Notifications">
+          <i class="fa-regular fa-bell" aria-hidden="true"></i>
+        </button>
+        <button class="navbar__icon-btn navbar__icon-btn--settings" aria-label="Settings">
+          <i class="fa-solid fa-sliders" aria-hidden="true"></i>
+        </button>
+        <a href="#" class="navbar__avatar" aria-label="User profile">
+          <img src="https://i.pravatar.cc/40?img=12" alt="User avatar" width="40" height="40" />
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="container payment-layout">
+
+      <!-- LEFT COLUMN: Forms -->
+      <div class="payment-left">
+
+        <!-- 1. Billing Info -->
+        <section class="payment-section" aria-labelledby="billing-heading">
+          <div class="payment-section__header">
+            <div>
+              <h2 id="billing-heading" class="payment-section__title">Billing Info</h2>
+              <p class="payment-section__subtitle">Please enter your billing info</p>
+            </div>
+            <span class="payment-section__step">Step 1 of 4</span>
+          </div>
+          <div class="form-grid">
+            <div class="form-field">
+              <label for="bill-name" class="form-label">Name</label>
+              <input id="bill-name" type="text" placeholder="Your name" class="form-input" />
+            </div>
+            <div class="form-field">
+              <label for="bill-phone" class="form-label">Phone Number</label>
+              <input id="bill-phone" type="tel" placeholder="Phone number" class="form-input" />
+            </div>
+            <div class="form-field">
+              <label for="bill-address" class="form-label">Address</label>
+              <input id="bill-address" type="text" placeholder="Address" class="form-input" />
+            </div>
+            <div class="form-field">
+              <label for="bill-city" class="form-label">Town / City</label>
+              <input id="bill-city" type="text" placeholder="Town or city" class="form-input" />
+            </div>
+          </div>
+        </section>
+
+        <!-- 2. Rental Info -->
+        <section class="payment-section" aria-labelledby="rental-heading">
+          <div class="payment-section__header">
+            <div>
+              <h2 id="rental-heading" class="payment-section__title">Rental Info</h2>
+              <p class="payment-section__subtitle">Please select your rental date</p>
+            </div>
+            <span class="payment-section__step">Step 2 of 4</span>
+          </div>
+
+          <fieldset class="rental-group">
+            <legend class="rental-group__legend">
+              <label class="booking__radio-label">
+                <input type="radio" name="rental-type" value="pickup" checked class="booking__radio" />
+                <span class="booking__radio-dot"></span>
+                Pick-Up
+              </label>
+            </legend>
+            <div class="form-grid">
+              <div class="form-field">
+                <label for="rent-pickup-loc" class="form-label">Locations</label>
+                <select id="rent-pickup-loc" class="form-select">
+                  <option value="">Select your city</option>
+                  <option>New York</option>
+                  <option>Los Angeles</option>
+                  <option>Chicago</option>
+                  <option>Miami</option>
+                </select>
+              </div>
+              <div class="form-field">
+                <label for="rent-pickup-date" class="form-label">Date</label>
+                <input id="rent-pickup-date" type="date" class="form-input" />
+              </div>
+              <div class="form-field">
+                <label for="rent-pickup-time" class="form-label">Time</label>
+                <select id="rent-pickup-time" class="form-select">
+                  <option value="">Select your time</option>
+                  <option>08:00 AM</option>
+                  <option>10:00 AM</option>
+                  <option>12:00 PM</option>
+                  <option>02:00 PM</option>
+                  <option>04:00 PM</option>
+                </select>
+              </div>
+            </div>
+          </fieldset>
+
+          <fieldset class="rental-group">
+            <legend class="rental-group__legend">
+              <label class="booking__radio-label">
+                <input type="radio" name="rental-type" value="dropoff" class="booking__radio" />
+                <span class="booking__radio-dot"></span>
+                Drop-Off
+              </label>
+            </legend>
+            <div class="form-grid">
+              <div class="form-field">
+                <label for="rent-drop-loc" class="form-label">Locations</label>
+                <select id="rent-drop-loc" class="form-select">
+                  <option value="">Select your city</option>
+                  <option>New York</option>
+                  <option>Los Angeles</option>
+                  <option>Chicago</option>
+                  <option>Miami</option>
+                </select>
+              </div>
+              <div class="form-field">
+                <label for="rent-drop-date" class="form-label">Date</label>
+                <input id="rent-drop-date" type="date" class="form-input" />
+              </div>
+              <div class="form-field">
+                <label for="rent-drop-time" class="form-label">Time</label>
+                <select id="rent-drop-time" class="form-select">
+                  <option value="">Select your time</option>
+                  <option>08:00 AM</option>
+                  <option>10:00 AM</option>
+                  <option>12:00 PM</option>
+                  <option>02:00 PM</option>
+                  <option>04:00 PM</option>
+                </select>
+              </div>
+            </div>
+          </fieldset>
+        </section>
+
+        <!-- 3. Payment Method -->
+        <section class="payment-section" aria-labelledby="method-heading">
+          <div class="payment-section__header">
+            <div>
+              <h2 id="method-heading" class="payment-section__title">Payment Method</h2>
+              <p class="payment-section__subtitle">Please enter your payment method</p>
+            </div>
+            <span class="payment-section__step">Step 3 of 4</span>
+          </div>
+
+          <!-- Credit Card -->
+          <div class="pay-method">
+            <label class="pay-method__option pay-method__option--active">
+              <div class="pay-method__label">
+                <input type="radio" name="pay-method" value="card" checked class="booking__radio" />
+                <span class="booking__radio-dot"></span>
+                Credit Card
+              </div>
+              <div class="pay-method__logos">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/0/04/Visa.svg" alt="Visa" height="20" />
+                <img src="https://upload.wikimedia.org/wikipedia/commons/2/2a/Mastercard-logo.svg" alt="Mastercard" height="20" />
+              </div>
+            </label>
+
+            <div class="card-form">
+              <div class="form-field form-field--full">
+                <label for="card-number" class="form-label">Card Number</label>
+                <input id="card-number" type="text" placeholder="Card number" class="form-input" maxlength="19" />
+              </div>
+              <div class="form-field form-field--full">
+                <label for="card-holder" class="form-label">Card Holder</label>
+                <input id="card-holder" type="text" placeholder="Card holder name" class="form-input" />
+              </div>
+              <div class="form-field">
+                <label for="card-exp" class="form-label">Expiration Date</label>
+                <input id="card-exp" type="text" placeholder="DD / MM / YY" class="form-input" />
+              </div>
+              <div class="form-field">
+                <label for="card-cvc" class="form-label">CVC</label>
+                <input id="card-cvc" type="text" placeholder="CVC" class="form-input" maxlength="3" />
+              </div>
+            </div>
+          </div>
+
+          <!-- PayPal -->
+          <div class="pay-method">
+            <label class="pay-method__option">
+              <div class="pay-method__label">
+                <input type="radio" name="pay-method" value="paypal" class="booking__radio" />
+                <span class="booking__radio-dot"></span>
+                PayPal
+              </div>
+              <img src="https://upload.wikimedia.org/wikipedia/commons/b/b5/PayPal.svg" alt="PayPal" height="20" />
+            </label>
+          </div>
+
+          <!-- Bitcoin -->
+          <div class="pay-method">
+            <label class="pay-method__option">
+              <div class="pay-method__label">
+                <input type="radio" name="pay-method" value="bitcoin" class="booking__radio" />
+                <span class="booking__radio-dot"></span>
+                Bitcoin
+              </div>
+              <img src="https://upload.wikimedia.org/wikipedia/commons/4/46/Bitcoin.svg" alt="Bitcoin" height="20" />
+            </label>
+          </div>
+        </section>
+
+        <!-- 4. Confirmation -->
+        <section class="payment-section" aria-labelledby="confirm-heading">
+          <div class="payment-section__header">
+            <div>
+              <h2 id="confirm-heading" class="payment-section__title">Confirmation</h2>
+              <p class="payment-section__subtitle">We are getting to the end. Just few clicks and your rental is ready!</p>
+            </div>
+            <span class="payment-section__step">Step 4 of 4</span>
+          </div>
+
+          <div class="confirm-checks">
+            <label class="confirm-check">
+              <input type="checkbox" class="confirm-check__input" checked />
+              <span class="confirm-check__mark"></span>
+              <span>I agree with sending Marketing and newsletter emails. No spam, promised!</span>
+            </label>
+            <label class="confirm-check">
+              <input type="checkbox" class="confirm-check__input" checked />
+              <span class="confirm-check__mark"></span>
+              <span>I agree with our terms and conditions and privacy policy.</span>
+            </label>
+          </div>
+
+          <button class="btn btn--primary btn--lg confirm-btn" type="button">Rent Now</button>
+
+          <div class="confirm-security">
+            <i class="fa-solid fa-shield-halved" aria-hidden="true"></i>
+            <div>
+              <p class="confirm-security__title">All your data are safe</p>
+              <p class="confirm-security__desc">We are using the most advanced security to provide you the best experience ever.</p>
+            </div>
+          </div>
+        </section>
+
+      </div><!-- /.payment-left -->
+
+      <!-- RIGHT COLUMN: Rental Summary -->
+      <div class="payment-right">
+        <aside class="rental-summary" aria-label="Rental summary">
+          <h2 class="rental-summary__title">Rental Summary</h2>
+          <p class="rental-summary__subtitle">Prices may change depending on the length of the rental and the price of your rental car.</p>
+
+          <div class="rental-summary__car">
+            <div class="rental-summary__car-img">
+              <img
+                src="https://images.unsplash.com/photo-1591693745437-1d02ee0e28c4?w=300&h=180&fit=crop&q=80"
+                alt="Nissan GT-R"
+              />
+            </div>
+            <div class="rental-summary__car-info">
+              <h3 class="rental-summary__car-name">Nissan GT-R</h3>
+              <div class="stars stars--sm" aria-label="4.5 stars">
+                <i class="fa-solid fa-star" aria-hidden="true"></i>
+                <i class="fa-solid fa-star" aria-hidden="true"></i>
+                <i class="fa-solid fa-star" aria-hidden="true"></i>
+                <i class="fa-solid fa-star" aria-hidden="true"></i>
+                <i class="fa-solid fa-star-half-stroke" aria-hidden="true"></i>
+              </div>
+              <span class="rental-summary__reviewer">440+ Reviewer</span>
+            </div>
+          </div>
+
+          <hr class="rental-summary__divider" />
+
+          <dl class="rental-summary__rows">
+            <div class="rental-summary__row">
+              <dt>Subtotal</dt>
+              <dd>$80.00</dd>
+            </div>
+            <div class="rental-summary__row">
+              <dt>Tax</dt>
+              <dd>$0</dd>
+            </div>
+            <div class="rental-summary__row">
+              <dt>
+                Discount <span class="rental-summary__discount-badge">80%</span>
+              </dt>
+              <dd class="rental-summary__discount-val">-$64.00</dd>
+            </div>
+          </dl>
+
+          <div class="rental-summary__total">
+            <div>
+              <p class="rental-summary__total-label">Total Rental Price</p>
+              <p class="rental-summary__total-note">Overall price and includes rental discount</p>
+            </div>
+            <p class="rental-summary__total-price">$16.00</p>
+          </div>
+        </aside>
+      </div><!-- /.payment-right -->
+
+    </div><!-- /.container -->
+  </main>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <a href="index.html" class="navbar__logo footer__logo" aria-label="MORENT home">
+          <svg width="28" height="28" viewBox="0 0 28 28" fill="none" aria-hidden="true">
+            <rect width="28" height="28" rx="6" fill="#3563E9"/>
+            <path d="M6 18l3-6h10l3 6H6z" fill="white"/>
+            <circle cx="10" cy="19.5" r="1.5" fill="white"/>
+            <circle cx="18" cy="19.5" r="1.5" fill="white"/>
+            <path d="M9 15l1.5-3h7l1.5 3H9z" fill="#3563E9"/>
+          </svg>
+          <span>MORENT</span>
+        </a>
+        <p class="footer__tagline">Our vision is to provide convenience and help increase your sales business.</p>
+      </div>
+      <nav class="footer__links" aria-label="Footer navigation">
+        <div class="footer__col">
+          <h3 class="footer__col-title">About</h3>
+          <ul class="footer__list">
+            <li><a href="#" class="footer__link">How it works</a></li>
+            <li><a href="#" class="footer__link">Featured</a></li>
+            <li><a href="#" class="footer__link">Partnership</a></li>
+            <li><a href="#" class="footer__link">Business Relation</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h3 class="footer__col-title">Community</h3>
+          <ul class="footer__list">
+            <li><a href="#" class="footer__link">Events</a></li>
+            <li><a href="#" class="footer__link">Blog</a></li>
+            <li><a href="#" class="footer__link">Podcast</a></li>
+            <li><a href="#" class="footer__link">Invite a Friend</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h3 class="footer__col-title">Socials</h3>
+          <ul class="footer__list">
+            <li><a href="#" class="footer__link">Discord</a></li>
+            <li><a href="#" class="footer__link">Instagram</a></li>
+            <li><a href="#" class="footer__link">Twitter</a></li>
+            <li><a href="#" class="footer__link">Facebook</a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+    <div class="footer__bottom">
+      <div class="container footer__bottom-inner">
+        <p class="footer__copy">©2022 MORENT. All rights reserved</p>
+        <div class="footer__legal">
+          <a href="#" class="footer__link">Privacy Policy</a>
+          <a href="#" class="footer__link">Terms &amp; Condition</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
