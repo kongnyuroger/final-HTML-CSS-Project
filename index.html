@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MORENT — Car Rental</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="styles/style.css" />
+</head>
+<body>
+
+  <!-- ========== HEADER / NAVBAR ========== -->
+  <header class="navbar">
+    <div class="container navbar__inner">
+      <a href="index.html" class="navbar__logo" aria-label="MORENT home">
+        <svg width="28" height="28" viewBox="0 0 28 28" fill="none" aria-hidden="true">
+          <rect width="28" height="28" rx="6" fill="#3563E9"/>
+          <path d="M6 18l3-6h10l3 6H6z" fill="white"/>
+          <circle cx="10" cy="19.5" r="1.5" fill="white"/>
+          <circle cx="18" cy="19.5" r="1.5" fill="white"/>
+          <path d="M9 15l1.5-3h7l1.5 3H9z" fill="#3563E9"/>
+        </svg>
+        <span>MORENT</span>
+      </a>
+
+      <div class="navbar__search">
+        <label for="nav-search" class="sr-only">Search cars</label>
+        <i class="fa-solid fa-magnifying-glass navbar__search-icon" aria-hidden="true"></i>
+        <input id="nav-search" type="search" placeholder="Search something here" class="navbar__search-input" />
+        <button class="navbar__filter-btn" aria-label="Filter">
+          <i class="fa-solid fa-sliders" aria-hidden="true"></i>
+        </button>
+      </div>
+
+      <nav class="navbar__actions" aria-label="User actions">
+        <button class="navbar__icon-btn" aria-label="Favourites">
+          <i class="fa-regular fa-heart" aria-hidden="true"></i>
+        </button>
+        <button class="navbar__icon-btn" aria-label="Notifications">
+          <i class="fa-regular fa-bell" aria-hidden="true"></i>
+        </button>
+        <button class="navbar__icon-btn navbar__icon-btn--settings" aria-label="Settings">
+          <i class="fa-solid fa-sliders" aria-hidden="true"></i>
+        </button>
+        <a href="#" class="navbar__avatar" aria-label="User profile">
+          <img src="https://i.pravatar.cc/40?img=12" alt="User avatar" width="40" height="40" />
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ========== HERO ========== -->
+    <section class="hero" aria-label="Hero banners">
+      <div class="container hero__banners">
+        <article class="hero__banner hero__banner--blue">
+          <div class="hero__banner-text">
+            <h2>The Easy way<br />to Rent a Car<br />Anytime &amp; Anywhere</h2>
+            <p>Providing cheap and affordable<br />car rental services for you</p>
+            <a href="#popular-cars" class="btn btn--white">Rental Car</a>
+          </div>
+          <img
+            src="https://images.unsplash.com/photo-1555215695-3004980ad54e?w=360&q=80"
+            alt="White BMW sports car"
+            class="hero__banner-img"
+          />
+        </article>
+
+        <article class="hero__banner hero__banner--indigo">
+          <div class="hero__banner-text">
+            <h2>The Best Platform<br />for Car Rental</h2>
+            <p>Ease of doing a car rental safely<br />and reliably. Of course at a low price.</p>
+            <a href="#popular-cars" class="btn btn--white-outline">Rental Car</a>
+          </div>
+          <img
+            src="https://images.unsplash.com/photo-1617469767280-350c6560a4f5?w=360&q=80"
+            alt="Silver luxury coupe"
+            class="hero__banner-img"
+          />
+        </article>
+      </div>
+    </section>
+
+    <!-- ========== PICK-UP / DROP-OFF ========== -->
+    <section class="booking" aria-label="Pick-up and drop-off">
+      <div class="container booking__inner">
+        <div class="booking__card">
+          <div class="booking__card-header">
+            <label class="booking__radio-label">
+              <input type="radio" name="booking-type" value="pickup" checked class="booking__radio" />
+              <span class="booking__radio-dot"></span>
+              Pick-Up
+            </label>
+          </div>
+          <div class="booking__fields">
+            <div class="booking__field">
+              <span class="booking__field-label"><i class="fa-solid fa-location-dot" aria-hidden="true"></i> Locations</span>
+              <select class="booking__select" aria-label="Pick-up location">
+                <option value="">Select your city</option>
+                <option>New York</option>
+                <option>Los Angeles</option>
+                <option>Chicago</option>
+                <option>Miami</option>
+              </select>
+            </div>
+            <div class="booking__divider" aria-hidden="true"></div>
+            <div class="booking__field">
+              <span class="booking__field-label"><i class="fa-regular fa-calendar" aria-hidden="true"></i> Date</span>
+              <input type="date" class="booking__input" aria-label="Pick-up date" />
+            </div>
+            <div class="booking__divider" aria-hidden="true"></div>
+            <div class="booking__field">
+              <span class="booking__field-label"><i class="fa-regular fa-clock" aria-hidden="true"></i> Time</span>
+              <select class="booking__select" aria-label="Pick-up time">
+                <option value="">Select your time</option>
+                <option>08:00 AM</option>
+                <option>10:00 AM</option>
+                <option>12:00 PM</option>
+                <option>02:00 PM</option>
+                <option>04:00 PM</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <button class="booking__swap" aria-label="Swap pick-up and drop-off">
+          <i class="fa-solid fa-right-left" aria-hidden="true"></i>
+        </button>
+
+        <div class="booking__card">
+          <div class="booking__card-header">
+            <label class="booking__radio-label">
+              <input type="radio" name="booking-type" value="dropoff" class="booking__radio" />
+              <span class="booking__radio-dot"></span>
+              Drop-Off
+            </label>
+          </div>
+          <div class="booking__fields">
+            <div class="booking__field">
+              <span class="booking__field-label"><i class="fa-solid fa-location-dot" aria-hidden="true"></i> Locations</span>
+              <select class="booking__select" aria-label="Drop-off location">
+                <option value="">Select your city</option>
+                <option>New York</option>
+                <option>Los Angeles</option>
+                <option>Chicago</option>
+                <option>Miami</option>
+              </select>
+            </div>
+            <div class="booking__divider" aria-hidden="true"></div>
+            <div class="booking__field">
+              <span class="booking__field-label"><i class="fa-regular fa-calendar" aria-hidden="true"></i> Date</span>
+              <input type="date" class="booking__input" aria-label="Drop-off date" />
+            </div>
+            <div class="booking__divider" aria-hidden="true"></div>
+            <div class="booking__field">
+              <span class="booking__field-label"><i class="fa-regular fa-clock" aria-hidden="true"></i> Time</span>
+              <select class="booking__select" aria-label="Drop-off time">
+                <option value="">Select your time</option>
+                <option>08:00 AM</option>
+                <option>10:00 AM</option>
+                <option>12:00 PM</option>
+                <option>02:00 PM</option>
+                <option>04:00 PM</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== CATALOG: SIDEBAR + CAR LISTINGS ========== -->
+    <div class="catalog">
+      <div class="container catalog__inner">
+
+        <!-- LEFT SIDEBAR -->
+        <aside class="sidebar" aria-label="Filter cars">
+          <div class="sidebar__section">
+            <h2 class="sidebar__group-label">TYPE</h2>
+            <ul class="sidebar__list">
+              <li class="sidebar__item">
+                <label class="sidebar__check-label">
+                  <input type="checkbox" class="sidebar__checkbox" checked />
+                  <span class="sidebar__checkmark"></span>
+                  Sport
+                </label>
+                <span class="sidebar__count">10</span>
+              </li>
+              <li class="sidebar__item">
+                <label class="sidebar__check-label">
+                  <input type="checkbox" class="sidebar__checkbox" checked />
+                  <span class="sidebar__checkmark"></span>
+                  SUV
+                </label>
+                <span class="sidebar__count">12</span>
+              </li>
+              <li class="sidebar__item">
+                <label class="sidebar__check-label">
+                  <input type="checkbox" class="sidebar__checkbox" />
+                  <span class="sidebar__checkmark"></span>
+                  MPV
+                </label>
+                <span class="sidebar__count">16</span>
+              </li>
+              <li class="sidebar__item">
+                <label class="sidebar__check-label">
+                  <input type="checkbox" class="sidebar__checkbox" />
+                  <span class="sidebar__checkmark"></span>
+                  Sedan
+                </label>
+                <span class="sidebar__count">20</span>
+              </li>
+              <li class="sidebar__item">
+                <label class="sidebar__check-label">
+                  <input type="checkbox" class="sidebar__checkbox" />
+                  <span class="sidebar__checkmark"></span>
+                  Coupe
+                </label>
+                <span class="sidebar__count">14</span>
+              </li>
+              <li class="sidebar__item">
+                <label class="sidebar__check-label">
+                  <input type="checkbox" class="sidebar__checkbox" />
+                  <span class="sidebar__checkmark"></span>
+                  Hatchback
+                </label>
+                <span class="sidebar__count">14</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="sidebar__section">
+            <h2 class="sidebar__group-label">CAPACITY</h2>
+            <ul class="sidebar__list">
+              <li class="sidebar__item">
+                <label class="sidebar__check-label">
+                  <input type="checkbox" class="sidebar__checkbox" checked />
+                  <span class="sidebar__checkmark"></span>
+                  2 Person
+                </label>
+                <span class="sidebar__count">10</span>
+              </li>
+              <li class="sidebar__item">
+                <label class="sidebar__check-label">
+                  <input type="checkbox" class="sidebar__checkbox" />
+                  <span class="sidebar__checkmark"></span>
+                  4 Person
+                </label>
+                <span class="sidebar__count">14</span>
+              </li>
+              <li class="sidebar__item">
+                <label class="sidebar__check-label">
+                  <input type="checkbox" class="sidebar__checkbox" />
+                  <span class="sidebar__checkmark"></span>
+                  6 Person
+                </label>
+                <span class="sidebar__count">12</span>
+              </li>
+              <li class="sidebar__item">
+                <label class="sidebar__check-label">
+                  <input type="checkbox" class="sidebar__checkbox" />
+                  <span class="sidebar__checkmark"></span>
+                  8 or More
+                </label>
+                <span class="sidebar__count">16</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="sidebar__section">
+            <h2 class="sidebar__group-label">PRICE</h2>
+            <input
+              type="range"
+              class="sidebar__range"
+              min="0"
+              max="100"
+              value="100"
+              aria-label="Maximum price per day"
+            />
+            <p class="sidebar__range-label">Max. $100.00/ day</p>
+          </div>
+        </aside>
+
+        <!-- MAIN CAR LISTINGS -->
+        <div class="catalog__main">
+
+          <!-- Popular Cars -->
+          <section class="car-section" id="popular-cars" aria-labelledby="popular-heading">
+            <div class="car-section__header">
+              <h2 id="popular-heading" class="car-section__title">Popular Car</h2>
+              <a href="#" class="car-section__view-all">View All</a>
+            </div>
+            <div class="car-grid">
+
+              <article class="car-card">
+                <div class="car-card__top">
+                  <div>
+                    <h3 class="car-card__name">Koenigsegg</h3>
+                    <span class="car-card__badge">Sport</span>
+                  </div>
+                  <button class="car-card__fav" aria-label="Add to favourites">
+                    <i class="fa-regular fa-heart" aria-hidden="true"></i>
+                  </button>
+                </div>
+                <div class="car-card__img-wrap">
+                  <img src="https://images.unsplash.com/photo-1544636331-e26879cd4d9b?w=400&h=220&fit=crop&q=80" alt="Koenigsegg sports car" class="car-card__img" loading="lazy" />
+                </div>
+                <div class="car-card__specs">
+                  <span class="car-card__spec"><i class="fa-solid fa-gas-pump" aria-hidden="true"></i> 90L</span>
+                  <span class="car-card__spec"><i class="fa-solid fa-gears" aria-hidden="true"></i> Manual</span>
+                  <span class="car-card__spec"><i class="fa-solid fa-user-group" aria-hidden="true"></i> 2 People</span>
+                </div>
+                <div class="car-card__footer">
+                  <div class="car-card__price">$99.00/ <span>day</span></div>
+                  <a href="detail.html" class="btn btn--primary btn--sm">Rent Now</a>
+                </div>
+              </article>
+
+              <article class="car-card">
+                <div class="car-card__top">
+                  <div>
+                    <h3 class="car-card__name">Nissan GT-R</h3>
+                    <span class="car-card__badge">Sport</span>
+                  </div>
+                  <button class="car-card__fav car-card__fav--active" aria-label="Remove from favourites">
+                    <i class="fa-solid fa-heart" aria-hidden="true"></i>
+                  </button>
+                </div>
+                <div class="car-card__img-wrap">
+                  <img src="https://images.unsplash.com/photo-1591693745437-1d02ee0e28c4?w=400&h=220&fit=crop&q=80" alt="Nissan GT-R" class="car-card__img" loading="lazy" />
+                </div>
+                <div class="car-card__specs">
+                  <span class="car-card__spec"><i class="fa-solid fa-gas-pump" aria-hidden="true"></i> 80L</span>
+                  <span class="car-card__spec"><i class="fa-solid fa-gears" aria-hidden="true"></i> Manual</span>
+                  <span class="car-card__spec"><i class="fa-solid fa-user-group" aria-hidden="true"></i> 2 People</span>
+                </div>
+                <div class="car-card__footer">
+                  <div class="car-card__price">$80.00/ <span>day</span></div>
+                  <a href="detail.html" class="btn btn--primary btn--sm">Rent Now</a>
+                </div>
+              </article>
+
+              <article class="car-card">
+                <div class="car-card__top">
+                  <div>
+                    <h3 class="car-card__name">Rolls-Royce</h3>
+                    <span class="car-card__badge">Sedan</span>
+                  </div>
+                  <button class="car-card__fav" aria-label="Add to favourites">
+                    <i class="fa-regular fa-heart" aria-hidden="true"></i>
+                  </button>
+                </div>
+                <div class="car-card__img-wrap">
+                  <img src="https://images.unsplash.com/photo-1631295868223-63265b40d9e4?w=400&h=220&fit=crop&q=80" alt="Rolls-Royce sedan" class="car-card__img" loading="lazy" />
+                </div>
+                <div class="car-card__specs">
+                  <span class="car-card__spec"><i class="fa-solid fa-gas-pump" aria-hidden="true"></i> 100L</span>
+                  <span class="car-card__spec"><i class="fa-solid fa-gears" aria-hidden="true"></i> Auto</span>
+                  <span class="car-card__spec"><i class="fa-solid fa-user-group" aria-hidden="true"></i> 4 People</span>
+                </div>
+                <div class="car-card__footer">
+                  <div class="car-card__price">$96.00/ <span>day</span></div>
+                  <a href="detail.html" class="btn btn--primary btn--sm">Rent Now</a>
+                </div>
+              </article>
+
+              <article class="car-card">
+                <div class="car-card__top">
+                  <div>
+                    <h3 class="car-card__name">Nissan GT-R</h3>
+                    <span class="car-card__badge">Sport</span>
+                  </div>
+                  <button class="car-card__fav car-card__fav--active" aria-label="Remove from favourites">
+                    <i class="fa-solid fa-heart" aria-hidden="true"></i>
+                  </button>
+                </div>
+                <div class="car-card__img-wrap">
+                  <img src="https://images.unsplash.com/photo-1555215695-3004980ad54e?w=400&h=220&fit=crop&q=80" alt="Nissan GT-R side view" class="car-card__img" loading="lazy" />
+                </div>
+                <div class="car-card__specs">
+                  <span class="car-card__spec"><i class="fa-solid fa-gas-pump" aria-hidden="true"></i> 80L</span>
+                  <span class="car-card__spec"><i class="fa-solid fa-gears" aria-hidden="true"></i> Manual</span>
+                  <span class="car-card__spec"><i class="fa-solid fa-user-group" aria-hidden="true"></i> 2 People</span>
+                </div>
+                <div class="car-card__footer">
+                  <div class="car-card__price">$80.00/ <span>day</span></div>
+                  <a href="detail.html" class="btn btn--primary btn--sm">Rent Now</a>
+                </div>
+              </article>
+
+            </div>
+          </section>
+
+          <!-- Recommendation Cars -->
+          <section class="car-section" aria-labelledby="rec-heading">
+            <div class="car-section__header">
+              <h2 id="rec-heading" class="car-section__title">Recommendation Car</h2>
+              <a href="#" class="car-section__view-all">View All</a>
+            </div>
+            <div class="car-grid">
+
+              <article class="car-card">
+                <div class="car-card__top">
+                  <div>
+                    <h3 class="car-card__name">All New Rush</h3>
+                    <span class="car-card__badge">SUV</span>
+                  </div>
+                  <button class="car-card__fav" aria-label="Add to favourites">
+                    <i class="fa-regular fa-heart" aria-hidden="true"></i>
+                  </button>
+                </div>
+                <div class="car-card__img-wrap">
+                  <img src="https://images.unsplash.com/photo-1519641471654-76ce0107ad1b?w=400&h=220&fit=crop&q=80" alt="All New Rush SUV" class="car-card__img" loading="lazy" />
+                </div>
+                <div class="car-card__specs">
+                  <span class="car-card__spec"><i class="fa-solid fa-gas-pump" aria-hidden="true"></i> 70L</span>
+                  <span class="car-card__spec"><i class="fa-solid fa-gears" aria-hidden="true"></i> Manual</span>
+                  <span class="car-card__spec"><i class="fa-solid fa-user-group" aria-hidden="true"></i> 6 People</span>
+                </div>
+                <div class="car-card__footer">
+                  <div class="car-card__price">$72.00/ <span>day</span></div>
+                  <a href="detail.html" class="btn btn--primary btn--sm">Rent Now</a>
+                </div>
+              </article>
+
+              <article class="car-card">
+                <div class="car-card__top">
+                  <div>
+                    <h3 class="car-card__name">CR-V</h3>
+                    <span class="car-card__badge">SUV</span>
+                  </div>
+                  <button class="car-card__fav car-card__fav--active" aria-label="Remove from favourites">
+                    <i class="fa-solid fa-heart" aria-hidden="true"></i>
+                  </button>
+                </div>
+                <div class="car-card__img-wrap">
+                  <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=400&h=220&fit=crop&q=80" alt="Honda CR-V" class="car-card__img" loading="lazy" />
+                </div>
+                <div class="car-card__specs">
+                  <span class="car-card__spec"><i class="fa-solid fa-gas-pump" aria-hidden="true"></i> 80L</span>
+                  <span class="car-card__spec"><i class="fa-solid fa-gears" aria-hidden="true"></i> Auto</span>
+                  <span class="car-card__spec"><i class="fa-solid fa-user-group" aria-hidden="true"></i> 6 People</span>
+                </div>
+                <div class="car-card__footer">
+                  <div class="car-card__price">$80.00/ <span>day</span></div>
+                  <a href="detail.html" class="btn btn--primary btn--sm">Rent Now</a>
+                </div>
+              </article>
+
+              <article class="car-card">
+                <div class="car-card__top">
+                  <div>
+                    <h3 class="car-card__name">All New Terios</h3>
+                    <span class="car-card__badge">SUV</span>
+                  </div>
+                  <button class="car-card__fav" aria-label="Add to favourites">
+                    <i class="fa-regular fa-heart" aria-hidden="true"></i>
+                  </button>
+                </div>
+                <div class="car-card__img-wrap">
+                  <img src="https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?w=400&h=220&fit=crop&q=80" alt="All New Terios" class="car-card__img" loading="lazy" />
+                </div>
+                <div class="car-card__specs">
+                  <span class="car-card__spec"><i class="fa-solid fa-gas-pump" aria-hidden="true"></i> 90L</span>
+                  <span class="car-card__spec"><i class="fa-solid fa-gears" aria-hidden="true"></i> Manual</span>
+                  <span class="car-card__spec"><i class="fa-solid fa-user-group" aria-hidden="true"></i> 6 People</span>
+                </div>
+                <div class="car-card__footer">
+                  <div class="car-card__price">$74.00/ <span>day</span></div>
+                  <a href="detail.html" class="btn btn--primary btn--sm">Rent Now</a>
+                </div>
+              </article>
+
+              <article class="car-card">
+                <div class="car-card__top">
+                  <div>
+                    <h3 class="car-card__name">MG ZS</h3>
+                    <span class="car-card__badge">Hatchback</span>
+                  </div>
+                  <button class="car-card__fav" aria-label="Add to favourites">
+                    <i class="fa-regular fa-heart" aria-hidden="true"></i>
+                  </button>
+                </div>
+                <div class="car-card__img-wrap">
+                  <img src="https://images.unsplash.com/photo-1616422285623-13ff0162193c?w=400&h=220&fit=crop&q=80" alt="MG ZS" class="car-card__img" loading="lazy" />
+                </div>
+                <div class="car-card__specs">
+                  <span class="car-card__spec"><i class="fa-solid fa-gas-pump" aria-hidden="true"></i> 80L</span>
+                  <span class="car-card__spec"><i class="fa-solid fa-gears" aria-hidden="true"></i> Auto</span>
+                  <span class="car-card__spec"><i class="fa-solid fa-user-group" aria-hidden="true"></i> 4 People</span>
+                </div>
+                <div class="car-card__footer">
+                  <div class="car-card__price">$76.00/ <span>day</span></div>
+                  <a href="detail.html" class="btn btn--primary btn--sm">Rent Now</a>
+                </div>
+              </article>
+
+              <article class="car-card">
+                <div class="car-card__top">
+                  <div>
+                    <h3 class="car-card__name">New MGZS</h3>
+                    <span class="car-card__badge">SUV</span>
+                  </div>
+                  <button class="car-card__fav car-card__fav--active" aria-label="Remove from favourites">
+                    <i class="fa-solid fa-heart" aria-hidden="true"></i>
+                  </button>
+                </div>
+                <div class="car-card__img-wrap">
+                  <img src="https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?w=400&h=220&fit=crop&q=80" alt="New MGZS" class="car-card__img" loading="lazy" />
+                </div>
+                <div class="car-card__specs">
+                  <span class="car-card__spec"><i class="fa-solid fa-gas-pump" aria-hidden="true"></i> 80L</span>
+                  <span class="car-card__spec"><i class="fa-solid fa-gears" aria-hidden="true"></i> Manual</span>
+                  <span class="car-card__spec"><i class="fa-solid fa-user-group" aria-hidden="true"></i> 4 People</span>
+                </div>
+                <div class="car-card__footer">
+                  <div class="car-card__price">$80.00/ <span>day</span></div>
+                  <a href="detail.html" class="btn btn--primary btn--sm">Rent Now</a>
+                </div>
+              </article>
+
+              <article class="car-card">
+                <div class="car-card__top">
+                  <div>
+                    <h3 class="car-card__name">MG ZX</h3>
+                    <span class="car-card__badge">Hatchback</span>
+                  </div>
+                  <button class="car-card__fav" aria-label="Add to favourites">
+                    <i class="fa-regular fa-heart" aria-hidden="true"></i>
+                  </button>
+                </div>
+                <div class="car-card__img-wrap">
+                  <img src="https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?w=400&h=220&fit=crop&q=80" alt="MG ZX" class="car-card__img" loading="lazy" />
+                </div>
+                <div class="car-card__specs">
+                  <span class="car-card__spec"><i class="fa-solid fa-gas-pump" aria-hidden="true"></i> 70L</span>
+                  <span class="car-card__spec"><i class="fa-solid fa-gears" aria-hidden="true"></i> Auto</span>
+                  <span class="car-card__spec"><i class="fa-solid fa-user-group" aria-hidden="true"></i> 4 People</span>
+                </div>
+                <div class="car-card__footer">
+                  <div class="car-card__price">$76.00/ <span>day</span></div>
+                  <a href="detail.html" class="btn btn--primary btn--sm">Rent Now</a>
+                </div>
+              </article>
+
+              <article class="car-card">
+                <div class="car-card__top">
+                  <div>
+                    <h3 class="car-card__name">MG5</h3>
+                    <span class="car-card__badge">Sedan</span>
+                  </div>
+                  <button class="car-card__fav" aria-label="Add to favourites">
+                    <i class="fa-regular fa-heart" aria-hidden="true"></i>
+                  </button>
+                </div>
+                <div class="car-card__img-wrap">
+                  <img src="https://images.unsplash.com/photo-1606016159991-dfe4f2746ad5?w=400&h=220&fit=crop&q=80" alt="MG5 sedan" class="car-card__img" loading="lazy" />
+                </div>
+                <div class="car-card__specs">
+                  <span class="car-card__spec"><i class="fa-solid fa-gas-pump" aria-hidden="true"></i> 90L</span>
+                  <span class="car-card__spec"><i class="fa-solid fa-gears" aria-hidden="true"></i> Manual</span>
+                  <span class="car-card__spec"><i class="fa-solid fa-user-group" aria-hidden="true"></i> 4 People</span>
+                </div>
+                <div class="car-card__footer">
+                  <div class="car-card__price">$76.00/ <span>day</span></div>
+                  <a href="detail.html" class="btn btn--primary btn--sm">Rent Now</a>
+                </div>
+              </article>
+
+              <article class="car-card">
+                <div class="car-card__top">
+                  <div>
+                    <h3 class="car-card__name">Mitsubishi X</h3>
+                    <span class="car-card__badge">Sport</span>
+                  </div>
+                  <button class="car-card__fav car-card__fav--active" aria-label="Remove from favourites">
+                    <i class="fa-solid fa-heart" aria-hidden="true"></i>
+                  </button>
+                </div>
+                <div class="car-card__img-wrap">
+                  <img src="https://images.unsplash.com/photo-1552519507-da3b142c6e3d?w=400&h=220&fit=crop&q=80" alt="Mitsubishi X" class="car-card__img" loading="lazy" />
+                </div>
+                <div class="car-card__specs">
+                  <span class="car-card__spec"><i class="fa-solid fa-gas-pump" aria-hidden="true"></i> 70L</span>
+                  <span class="car-card__spec"><i class="fa-solid fa-gears" aria-hidden="true"></i> Manual</span>
+                  <span class="car-card__spec"><i class="fa-solid fa-user-group" aria-hidden="true"></i> 2 People</span>
+                </div>
+                <div class="car-card__footer">
+                  <div class="car-card__price">$74.00/ <span>day</span></div>
+                  <a href="detail.html" class="btn btn--primary btn--sm">Rent Now</a>
+                </div>
+              </article>
+
+            </div>
+
+            <div class="car-section__show-more">
+              <p class="car-section__showing">Showing 12 out of 120 cars</p>
+              <a href="#" class="btn btn--primary btn--lg">Show more car</a>
+            </div>
+          </section>
+
+        </div><!-- /.catalog__main -->
+      </div><!-- /.container -->
+    </div><!-- /.catalog -->
+
+  </main>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <a href="index.html" class="navbar__logo footer__logo" aria-label="MORENT home">
+          <svg width="28" height="28" viewBox="0 0 28 28" fill="none" aria-hidden="true">
+            <rect width="28" height="28" rx="6" fill="#3563E9"/>
+            <path d="M6 18l3-6h10l3 6H6z" fill="white"/>
+            <circle cx="10" cy="19.5" r="1.5" fill="white"/>
+            <circle cx="18" cy="19.5" r="1.5" fill="white"/>
+            <path d="M9 15l1.5-3h7l1.5 3H9z" fill="#3563E9"/>
+          </svg>
+          <span>MORENT</span>
+        </a>
+        <p class="footer__tagline">Our vision is to provide convenience and help increase your sales business.</p>
+      </div>
+
+      <nav class="footer__links" aria-label="Footer navigation">
+        <div class="footer__col">
+          <h3 class="footer__col-title">About</h3>
+          <ul class="footer__list">
+            <li><a href="#" class="footer__link">How it works</a></li>
+            <li><a href="#" class="footer__link">Featured</a></li>
+            <li><a href="#" class="footer__link">Partnership</a></li>
+            <li><a href="#" class="footer__link">Business Relation</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h3 class="footer__col-title">Community</h3>
+          <ul class="footer__list">
+            <li><a href="#" class="footer__link">Events</a></li>
+            <li><a href="#" class="footer__link">Blog</a></li>
+            <li><a href="#" class="footer__link">Podcast</a></li>
+            <li><a href="#" class="footer__link">Invite a Friend</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h3 class="footer__col-title">Socials</h3>
+          <ul class="footer__list">
+            <li><a href="#" class="footer__link">Discord</a></li>
+            <li><a href="#" class="footer__link">Instagram</a></li>
+            <li><a href="#" class="footer__link">Twitter</a></li>
+            <li><a href="#" class="footer__link">Facebook</a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+
+    <div class="footer__bottom">
+      <div class="container footer__bottom-inner">
+        <p class="footer__copy">©2022 MORENT. All rights reserved</p>
+        <div class="footer__legal">
+          <a href="#" class="footer__link">Privacy Policy</a>
+          <a href="#" class="footer__link">Terms &amp; Condition</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
