@@ -3,7 +3,8 @@
 ![MORENT Preview](https://images.unsplash.com/photo-1555215695-3004980ad54e?w=1200&q=80)
 
 MORENT is a premium, modern, and fully responsive Car Rental Platform design. This project focuses on high-end aesthetics, smooth user experience, and a clean interface built entirely with semantic HTML5 and Vanilla CSS3.
-
+## Deployment link
+https://final-html-css-project-pi.vercel.app/
 ## 🚀 Key Features
 
 - **Dynamic Landing Page**: Features hero banners, pick-up/drop-off forms, and curated car categories.
@@ -36,11 +37,11 @@ Since this is a front-end design project, it does not require any build tools or
 
 1. **Clone the Repository**:
    ```bash
-   git clone https://github.com/your-username/html-css-final-project.git
+   git clone https://github.com/kongnyuroger/final-HTML-CSS-Project.git
    ```
 2. **Navigate to the Directory**:
    ```bash
-   cd html-css-final-project
+   cd final-HTML-CSS-Project
    ```
 3. **Open in Browser**:
    Double-click `index.html` or open it using a live server extension in your preferred IDE (like VS Code's "Live Server").
