@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nissan GT-R — MORENT</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="styles/style.css" />
+</head>
+<body>
+
+  <!-- ========== NAVBAR ========== -->
+  <header class="navbar">
+    <div class="container navbar__inner">
+      <a href="index.html" class="navbar__logo" aria-label="MORENT home">
+        <svg width="28" height="28" viewBox="0 0 28 28" fill="none" aria-hidden="true">
+          <rect width="28" height="28" rx="6" fill="#3563E9"/>
+          <path d="M6 18l3-6h10l3 6H6z" fill="white"/>
+          <circle cx="10" cy="19.5" r="1.5" fill="white"/>
+          <circle cx="18" cy="19.5" r="1.5" fill="white"/>
+          <path d="M9 15l1.5-3h7l1.5 3H9z" fill="#3563E9"/>
+        </svg>
+        <span>MORENT</span>
+      </a>
+
+      <div class="navbar__search">
+        <label for="nav-search" class="sr-only">Search cars</label>
+        <i class="fa-solid fa-magnifying-glass navbar__search-icon" aria-hidden="true"></i>
+        <input id="nav-search" type="search" placeholder="Search something here" class="navbar__search-input" />
+        <button class="navbar__filter-btn" aria-label="Filter">
+          <i class="fa-solid fa-sliders" aria-hidden="true"></i>
+        </button>
+      </div>
+
+      <nav class="navbar__actions" aria-label="User actions">
+        <button class="navbar__icon-btn" aria-label="Favourites">
+          <i class="fa-regular fa-heart" aria-hidden="true"></i>
+        </button>
+        <button class="navbar__icon-btn" aria-label="Notifications">
+          <i class="fa-regular fa-bell" aria-hidden="true"></i>
+        </button>
+        <button class="navbar__icon-btn navbar__icon-btn--settings" aria-label="Settings">
+          <i class="fa-solid fa-sliders" aria-hidden="true"></i>
+        </button>
+        <a href="#" class="navbar__avatar" aria-label="User profile">
+          <img src="https://i.pravatar.cc/40?img=12" alt="User avatar" width="40" height="40" />
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="container detail-layout">
+
+      <!-- LEFT COLUMN -->
+      <div class="detail-left">
+
+        <!-- Car Images -->
+        <div class="detail-gallery">
+          <div class="detail-gallery__main">
+            <img
+              src="https://images.unsplash.com/photo-1591693745437-1d02ee0e28c4?w=780&h=460&fit=crop&q=80"
+              alt="Nissan GT-R — main view"
+              class="detail-gallery__main-img"
+              id="main-photo"
+            />
+            <div class="detail-gallery__badge">
+              <span>Sports car</span>
+            </div>
+          </div>
+          <div class="detail-gallery__thumbs" role="list" aria-label="Car photos">
+            <button class="detail-gallery__thumb detail-gallery__thumb--active" aria-label="View photo 1" onclick="document.getElementById('main-photo').src='https://images.unsplash.com/photo-1591693745437-1d02ee0e28c4?w=780&h=460&fit=crop&q=80'">
+              <img src="https://images.unsplash.com/photo-1591693745437-1d02ee0e28c4?w=200&h=120&fit=crop&q=80" alt="Nissan GT-R front" />
+            </button>
+            <button class="detail-gallery__thumb" aria-label="View photo 2" onclick="document.getElementById('main-photo').src='https://images.unsplash.com/photo-1596994997766-0d3b36ef6a37?w=780&h=460&fit=crop&q=80'">
+              <img src="https://images.unsplash.com/photo-1596994997766-0d3b36ef6a37?w=200&h=120&fit=crop&q=80" alt="Nissan GT-R side" />
+            </button>
+            <button class="detail-gallery__thumb" aria-label="View photo 3" onclick="document.getElementById('main-photo').src='https://images.unsplash.com/photo-1555215695-3004980ad54e?w=780&h=460&fit=crop&q=80'">
+              <img src="https://images.unsplash.com/photo-1555215695-3004980ad54e?w=200&h=120&fit=crop&q=80" alt="Nissan GT-R rear" />
+            </button>
+          </div>
+        </div>
+
+        <!-- Car Info -->
+        <div class="detail-info">
+          <div class="detail-info__header">
+            <div>
+              <h1 class="detail-info__name">Nissan GT-R</h1>
+              <div class="detail-info__rating">
+                <div class="stars" aria-label="Rating: 4.4 out of 5">
+                  <i class="fa-solid fa-star" aria-hidden="true"></i>
+                  <i class="fa-solid fa-star" aria-hidden="true"></i>
+                  <i class="fa-solid fa-star" aria-hidden="true"></i>
+                  <i class="fa-solid fa-star" aria-hidden="true"></i>
+                  <i class="fa-solid fa-star-half-stroke" aria-hidden="true"></i>
+                </div>
+                <span class="detail-info__reviews">440+ Reviewer</span>
+              </div>
+            </div>
+            <button class="car-card__fav car-card__fav--active" aria-label="Remove from favourites">
+              <i class="fa-solid fa-heart" aria-hidden="true"></i>
+            </button>
+          </div>
+
+          <p class="detail-info__desc">
+            NISMO has become the embodiment of Nissan's outstanding performance,
+            inspired by the most unforgiving proving ground, the "race track".
+          </p>
+
+          <dl class="detail-info__specs">
+            <div class="detail-info__spec-row">
+              <dt class="detail-info__spec-label">Type Car</dt>
+              <dd class="detail-info__spec-val">Sport</dd>
+              <dt class="detail-info__spec-label">Capacity</dt>
+              <dd class="detail-info__spec-val">2 Person</dd>
+            </div>
+            <div class="detail-info__spec-row">
+              <dt class="detail-info__spec-label">Steering</dt>
+              <dd class="detail-info__spec-val">Manual</dd>
+              <dt class="detail-info__spec-label">Gasoline</dt>
+              <dd class="detail-info__spec-val">70L</dd>
+            </div>
+          </dl>
+
+          <div class="detail-info__footer">
+            <div>
+              <p class="detail-info__price">$80.00/ <span>day</span></p>
+              <p class="detail-info__old-price"><s>$100.00</s></p>
+            </div>
+            <a href="payment.html" class="btn btn--primary btn--lg">Rent Now</a>
+          </div>
+        </div>
+
+      </div><!-- /.detail-left -->
+
+      <!-- RIGHT COLUMN: Reviews + Recent Cars -->
+      <div class="detail-right">
+
+        <!-- Reviews -->
+        <section class="reviews" aria-labelledby="reviews-heading">
+          <div class="reviews__header">
+            <h2 id="reviews-heading" class="reviews__title">Reviews</h2>
+            <span class="reviews__count">13</span>
+          </div>
+
+          <ul class="reviews__list">
+            <li class="review-card">
+              <div class="review-card__top">
+                <div class="review-card__user">
+                  <img src="https://i.pravatar.cc/48?img=3" alt="Alex Stanton" class="review-card__avatar" width="48" height="48" />
+                  <div>
+                    <p class="review-card__name">Alex Stanton</p>
+                    <p class="review-card__role">CEO at Thumbtack</p>
+                  </div>
+                </div>
+                <div class="review-card__meta">
+                  <div class="stars stars--sm" aria-label="4 stars">
+                    <i class="fa-solid fa-star" aria-hidden="true"></i>
+                    <i class="fa-solid fa-star" aria-hidden="true"></i>
+                    <i class="fa-solid fa-star" aria-hidden="true"></i>
+                    <i class="fa-solid fa-star" aria-hidden="true"></i>
+                    <i class="fa-regular fa-star" aria-hidden="true"></i>
+                  </div>
+                  <time class="review-card__date">21 July 2022</time>
+                </div>
+              </div>
+              <p class="review-card__text">
+                We are very happy with the service from the MORENT App. Morent has a
+                low price and also a very clean car condition. We will definitely use
+                Morent's service again next time.
+              </p>
+            </li>
+
+            <li class="review-card">
+              <div class="review-card__top">
+                <div class="review-card__user">
+                  <img src="https://i.pravatar.cc/48?img=5" alt="Skylar Dias" class="review-card__avatar" width="48" height="48" />
+                  <div>
+                    <p class="review-card__name">Skylar Dias</p>
+                    <p class="review-card__role">CEO at Canon</p>
+                  </div>
+                </div>
+                <div class="review-card__meta">
+                  <div class="stars stars--sm" aria-label="4.5 stars">
+                    <i class="fa-solid fa-star" aria-hidden="true"></i>
+                    <i class="fa-solid fa-star" aria-hidden="true"></i>
+                    <i class="fa-solid fa-star" aria-hidden="true"></i>
+                    <i class="fa-solid fa-star" aria-hidden="true"></i>
+                    <i class="fa-solid fa-star-half-stroke" aria-hidden="true"></i>
+                  </div>
+                  <time class="review-card__date">20 July 2022</time>
+                </div>
+              </div>
+              <p class="review-card__text">
+                We are greatly helped by the services of the MORENT Application.
+                Morent has low prices and also a very clean car condition. We will
+                definitely use Morent services again next time.
+              </p>
+            </li>
+          </ul>
+
+          <button class="reviews__show-all">
+            Show All <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
+          </button>
+        </section>
+
+        <!-- Recent / Other Cars -->
+        <section class="recent-cars" aria-labelledby="recent-heading">
+          <div class="car-section__header">
+            <h2 id="recent-heading" class="car-section__title">Recent Cars</h2>
+            <a href="index.html" class="car-section__view-all">View All</a>
+          </div>
+
+          <div class="car-grid car-grid--detail">
+
+            <article class="car-card">
+              <div class="car-card__top">
+                <div>
+                  <h3 class="car-card__name">All New Rush</h3>
+                  <span class="car-card__badge">SUV</span>
+                </div>
+                <button class="car-card__fav" aria-label="Add to favourites">
+                  <i class="fa-regular fa-heart" aria-hidden="true"></i>
+                </button>
+              </div>
+              <div class="car-card__img-wrap">
+                <img src="https://images.unsplash.com/photo-1519641471654-76ce0107ad1b?w=400&h=200&fit=crop&q=80" alt="All New Rush" class="car-card__img" loading="lazy" />
+              </div>
+              <div class="car-card__specs">
+                <span class="car-card__spec"><i class="fa-solid fa-gas-pump" aria-hidden="true"></i> 70L</span>
+                <span class="car-card__spec"><i class="fa-solid fa-gears" aria-hidden="true"></i> Manual</span>
+                <span class="car-card__spec"><i class="fa-solid fa-user-group" aria-hidden="true"></i> 6 People</span>
+              </div>
+              <div class="car-card__footer">
+                <div class="car-card__price">$72.00/ <span>day</span></div>
+                <a href="detail.html" class="btn btn--primary btn--sm">Rent Now</a>
+              </div>
+            </article>
+
+            <article class="car-card">
+              <div class="car-card__top">
+                <div>
+                  <h3 class="car-card__name">CR-V</h3>
+                  <span class="car-card__badge">SUV</span>
+                </div>
+                <button class="car-card__fav car-card__fav--active" aria-label="Remove from favourites">
+                  <i class="fa-solid fa-heart" aria-hidden="true"></i>
+                </button>
+              </div>
+              <div class="car-card__img-wrap">
+                <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=400&h=200&fit=crop&q=80" alt="Honda CR-V" class="car-card__img" loading="lazy" />
+              </div>
+              <div class="car-card__specs">
+                <span class="car-card__spec"><i class="fa-solid fa-gas-pump" aria-hidden="true"></i> 80L</span>
+                <span class="car-card__spec"><i class="fa-solid fa-gears" aria-hidden="true"></i> Auto</span>
+                <span class="car-card__spec"><i class="fa-solid fa-user-group" aria-hidden="true"></i> 6 People</span>
+              </div>
+              <div class="car-card__footer">
+                <div class="car-card__price">$80.00/ <span>day</span></div>
+                <a href="detail.html" class="btn btn--primary btn--sm">Rent Now</a>
+              </div>
+            </article>
+
+            <article class="car-card">
+              <div class="car-card__top">
+                <div>
+                  <h3 class="car-card__name">All New Terios</h3>
+                  <span class="car-card__badge">SUV</span>
+                </div>
+                <button class="car-card__fav" aria-label="Add to favourites">
+                  <i class="fa-regular fa-heart" aria-hidden="true"></i>
+                </button>
+              </div>
+              <div class="car-card__img-wrap">
+                <img src="https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?w=400&h=200&fit=crop&q=80" alt="All New Terios" class="car-card__img" loading="lazy" />
+              </div>
+              <div class="car-card__specs">
+                <span class="car-card__spec"><i class="fa-solid fa-gas-pump" aria-hidden="true"></i> 90L</span>
+                <span class="car-card__spec"><i class="fa-solid fa-gears" aria-hidden="true"></i> Manual</span>
+                <span class="car-card__spec"><i class="fa-solid fa-user-group" aria-hidden="true"></i> 6 People</span>
+              </div>
+              <div class="car-card__footer">
+                <div class="car-card__price">$74.00/ <span>day</span></div>
+                <a href="detail.html" class="btn btn--primary btn--sm">Rent Now</a>
+              </div>
+            </article>
+
+          </div>
+        </section>
+
+        <!-- Recommendation Cars -->
+        <section class="recent-cars" aria-labelledby="rec2-heading">
+          <div class="car-section__header">
+            <h2 id="rec2-heading" class="car-section__title">Recommendation Car</h2>
+            <a href="index.html" class="car-section__view-all">View All</a>
+          </div>
+
+          <div class="car-grid car-grid--detail">
+
+            <article class="car-card">
+              <div class="car-card__top">
+                <div>
+                  <h3 class="car-card__name">MG ZS</h3>
+                  <span class="car-card__badge">Hatchback</span>
+                </div>
+                <button class="car-card__fav" aria-label="Add to favourites">
+                  <i class="fa-regular fa-heart" aria-hidden="true"></i>
+                </button>
+              </div>
+              <div class="car-card__img-wrap">
+                <img src="https://images.unsplash.com/photo-1616422285623-13ff0162193c?w=400&h=200&fit=crop&q=80" alt="MG ZS" class="car-card__img" loading="lazy" />
+              </div>
+              <div class="car-card__specs">
+                <span class="car-card__spec"><i class="fa-solid fa-gas-pump" aria-hidden="true"></i> 80L</span>
+                <span class="car-card__spec"><i class="fa-solid fa-gears" aria-hidden="true"></i> Auto</span>
+                <span class="car-card__spec"><i class="fa-solid fa-user-group" aria-hidden="true"></i> 4 People</span>
+              </div>
+              <div class="car-card__footer">
+                <div class="car-card__price">$76.00/ <span>day</span></div>
+                <a href="detail.html" class="btn btn--primary btn--sm">Rent Now</a>
+              </div>
+            </article>
+
+            <article class="car-card">
+              <div class="car-card__top">
+                <div>
+                  <h3 class="car-card__name">New MGZS</h3>
+                  <span class="car-card__badge">SUV</span>
+                </div>
+                <button class="car-card__fav car-card__fav--active" aria-label="Remove from favourites">
+                  <i class="fa-solid fa-heart" aria-hidden="true"></i>
+                </button>
+              </div>
+              <div class="car-card__img-wrap">
+                <img src="https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?w=400&h=200&fit=crop&q=80" alt="New MGZS" class="car-card__img" loading="lazy" />
+              </div>
+              <div class="car-card__specs">
+                <span class="car-card__spec"><i class="fa-solid fa-gas-pump" aria-hidden="true"></i> 80L</span>
+                <span class="car-card__spec"><i class="fa-solid fa-gears" aria-hidden="true"></i> Manual</span>
+                <span class="car-card__spec"><i class="fa-solid fa-user-group" aria-hidden="true"></i> 4 People</span>
+              </div>
+              <div class="car-card__footer">
+                <div class="car-card__price">$80.00/ <span>day</span></div>
+                <a href="detail.html" class="btn btn--primary btn--sm">Rent Now</a>
+              </div>
+            </article>
+
+            <article class="car-card">
+              <div class="car-card__top">
+                <div>
+                  <h3 class="car-card__name">Mitsubishi X</h3>
+                  <span class="car-card__badge">Sport</span>
+                </div>
+                <button class="car-card__fav" aria-label="Add to favourites">
+                  <i class="fa-regular fa-heart" aria-hidden="true"></i>
+                </button>
+              </div>
+              <div class="car-card__img-wrap">
+                <img src="https://images.unsplash.com/photo-1552519507-da3b142c6e3d?w=400&h=200&fit=crop&q=80" alt="Mitsubishi X" class="car-card__img" loading="lazy" />
+              </div>
+              <div class="car-card__specs">
+                <span class="car-card__spec"><i class="fa-solid fa-gas-pump" aria-hidden="true"></i> 70L</span>
+                <span class="car-card__spec"><i class="fa-solid fa-gears" aria-hidden="true"></i> Manual</span>
+                <span class="car-card__spec"><i class="fa-solid fa-user-group" aria-hidden="true"></i> 2 People</span>
+              </div>
+              <div class="car-card__footer">
+                <div class="car-card__price">$74.00/ <span>day</span></div>
+                <a href="detail.html" class="btn btn--primary btn--sm">Rent Now</a>
+              </div>
+            </article>
+
+          </div>
+        </section>
+
+      </div><!-- /.detail-right -->
+    </div><!-- /.container -->
+  </main>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <a href="index.html" class="navbar__logo footer__logo" aria-label="MORENT home">
+          <svg width="28" height="28" viewBox="0 0 28 28" fill="none" aria-hidden="true">
+            <rect width="28" height="28" rx="6" fill="#3563E9"/>
+            <path d="M6 18l3-6h10l3 6H6z" fill="white"/>
+            <circle cx="10" cy="19.5" r="1.5" fill="white"/>
+            <circle cx="18" cy="19.5" r="1.5" fill="white"/>
+            <path d="M9 15l1.5-3h7l1.5 3H9z" fill="#3563E9"/>
+          </svg>
+          <span>MORENT</span>
+        </a>
+        <p class="footer__tagline">Our vision is to provide convenience and help increase your sales business.</p>
+      </div>
+      <nav class="footer__links" aria-label="Footer navigation">
+        <div class="footer__col">
+          <h3 class="footer__col-title">About</h3>
+          <ul class="footer__list">
+            <li><a href="#" class="footer__link">How it works</a></li>
+            <li><a href="#" class="footer__link">Featured</a></li>
+            <li><a href="#" class="footer__link">Partnership</a></li>
+            <li><a href="#" class="footer__link">Business Relation</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h3 class="footer__col-title">Community</h3>
+          <ul class="footer__list">
+            <li><a href="#" class="footer__link">Events</a></li>
+            <li><a href="#" class="footer__link">Blog</a></li>
+            <li><a href="#" class="footer__link">Podcast</a></li>
+            <li><a href="#" class="footer__link">Invite a Friend</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h3 class="footer__col-title">Socials</h3>
+          <ul class="footer__list">
+            <li><a href="#" class="footer__link">Discord</a></li>
+            <li><a href="#" class="footer__link">Instagram</a></li>
+            <li><a href="#" class="footer__link">Twitter</a></li>
+            <li><a href="#" class="footer__link">Facebook</a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+    <div class="footer__bottom">
+      <div class="container footer__bottom-inner">
+        <p class="footer__copy">©2022 MORENT. All rights reserved</p>
+        <div class="footer__legal">
+          <a href="#" class="footer__link">Privacy Policy</a>
+          <a href="#" class="footer__link">Terms &amp; Condition</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
