@@ -56,4 +56,4 @@ The project is structured to demonstrate a complete user flow:
 
 ---
 
-*Developed as a part of a Final HTML/CSS Design Project.*
+*Developed as a part of a Final HTML/CSS Design Project at Rebase Code Camp.*
